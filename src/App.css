@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f4f8;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido {
+  flex: 1;
+  padding: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* ---- navbar ---- */
+.navbar {
+  background-color: #1a237e;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a.active {
+  border-bottom: 2px solid #ffca28;
+  font-weight: bold;
+}
+
+/* ---- inicio ---- */
+.hero {
+  background-color: #3949ab;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+}
+
+/* ---- tarjetas ---- */
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.card-logo {
+  font-size: 40px;
+}
+
+.card-logo.grande {
+  font-size: 80px;
+}
+
+.categoria {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.etiqueta-hd {
+  display: inline-block;
+  background-color: #ffca28;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* ---- planes ---- */
+.plan ul {
+  list-style: none;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a237e;
+}
+
+.destacado {
+  border: 3px solid #ffca28;
+}
+
+.badge {
+  color: #e65100;
+  font-weight: bold;
+}
+
+.alerta {
+  margin-top: 30px;
+  background-color: #e8f5e9;
+  border: 1px solid #66bb6a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* ---- botones ---- */
+.btn {
+  display: inline-block;
+  background-color: #ffca28;
+  color: #222;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #ffb300;
+}
+
+.btn-secundario {
+  margin-left: 15px;
+  background: none;
+  border: 1px solid #666;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ---- filtros y formulario ---- */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select,
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.filtros input {
+  flex: 1;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 500px;
+}
+
+.error {
+  color: red;
+}
+
+.mensaje,
+.detalle {
+  text-align: center;
+  padding: 30px;
+}
+
+.detalle p {
+  margin: 8px 0;
+}
+
+/* ---- footer ---- */
+.footer {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ---- celular ---- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filtros {
+    flex-direction: column;
+  }
+}
